@@ -1,0 +1,712 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Ubuntu:wght@300;400;500;700&display=swap');
+/* Les variables */
+:root{
+    /* Polices */
+    --paraph-font : 'Poppins', sans-serif;
+    --title-font : 'Ubuntu', sans-serif;
+
+    /* Font size */
+    --big-size : 50px;
+    --small-size : 36px;
+    --medium : 25px;
+    --regular : 18px;
+
+    /* color font */
+    --default-color : #fff;
+    --blue-color : #2ab6d9;
+    --b-color : #254888;
+    --black-color : #000;
+    --blk-color : #222;
+    --btn-color : #014e61;
+
+    /* Utilities */
+    --hide : none;
+    --bg-black-rgba : (0, 0, 0, 0.6);
+    --border-default : 1px solid #fff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--paraph-font);
+    
+}
+
+/* Navigation design */
+nav.sticky {
+    padding: 5px 100px;
+    background:  var(--default-color);
+    color: var(--b-color);
+    border-bottom: none;
+    box-shadow: 0px 1px 1px 2px rgba(0,0,0,.1);
+}
+nav.sticky .Title h1{
+    color: var(--b-color);
+}
+
+nav.sticky ul li a {
+    color: var(--black-color);
+}
+nav.sticky ul li a:hover{
+    letter-spacing: 2px; 
+    color: var(--b-color);
+    font-weight: 600;
+}
+.main-bloc{
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    background: transparent;
+    border-bottom: var(--border-default); 
+    z-index: 1000;
+}
+.main-bloc .navigation-bloc{
+    width: 100%;
+    height: 100%;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation-bloc .Title{
+    width: auto;
+    height: auto;
+}
+.Title h1{
+    font-family: var(--title-font);
+    font-size: var(--big-size);
+    font-weight: 900;
+    color: var(--default-color);
+}
+.navigation-bloc ul{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-bloc ul li{
+    list-style: var(--hide);
+}
+.navigation-bloc ul li a{
+    text-decoration: var(--hide);
+    font-weight: 500;
+    margin-left: 30px;
+    color: var(--default-color);
+    transition: .5s;
+}
+.navigation-bloc ul li a:hover{
+    letter-spacing: 2px; 
+    color: var(--default-color);
+    font-weight: 600;
+    position: relative;
+}
+.navigation-bloc ul li a::before{
+    content: '';
+    position: absolute;
+    margin-bottom: -5px ;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--b-color);
+    transform-origin: 100% 0 ;
+    transform: scale(0);
+    transition: 0.4s;
+   
+}
+.navigation-bloc ul li a:hover::before{
+    transform-origin: 0 0;
+    transform: scale(1);
+}
+/* HUMBERGER DESIGN */
+.humb{
+    display: block;
+   
+        
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+        position: relative;
+
+}
+
+/* hero design */
+#Accueil{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--b-color );
+}
+#Accueil img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    opacity: 0.25;
+}
+#Accueil .content{
+    width: 750px;
+    text-align: center;
+    z-index: 1;
+}
+.content h1{
+    font-family: var(--title-font);
+    font-size: var(--big-size);
+    font-weight: 900;
+    color: var(--default-color);
+}
+.content p{
+    font-size: var(--regular);
+    font-family: var(--paraph-font);
+    color: var(--default-color);
+}
+
+/* A-propos design */
+#A-propos{
+    width: 100%; 
+}
+.about{
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--default-color);
+}
+.about .content{
+    width: 50%;
+    height: 400px;
+    padding: 20px 30px;
+    background-color: var(--default-color);
+}
+h2{
+    margin-bottom: 15px;
+    font-size: var(--big-size);
+    font-weight: 900;
+    color: var(--b-color);
+    font-family: var(--title-font);
+    
+}
+.about .content p{
+    font-size: var(--regular);
+    font-weight: 400;
+    color: var(--black-color);
+    font-family: var(--paraph-font);
+    line-height: 1.5;
+
+}
+.about .logo{
+    width: 50%;
+    height: 350px;
+    background-color: var(--blue-color);
+}
+.about .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Our services Design */
+#Services{
+    width: 100%;
+    padding: 0 100px;   
+    text-align: center;
+    margin-top: 60px; 
+}
+#Services .container{
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#Services .container .card{
+    width: 350px;
+    height: 400px;
+    margin:20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: #1111;  
+}
+.card div{
+    display: block;
+}
+#Services .container .card div img{
+    max-width: 100px;
+}
+#Services .container .card div h3{
+    padding: 10px;
+    font-size: var(--medium);
+    font-weight: 500;
+    font-family: var(--paraph-font);
+}
+
+/* our technologies design*/
+.tech{
+    width: 100%;
+    padding:60px;   
+    text-align: center;
+    margin-top: 60px;
+    background-color: var(--b-color); 
+}
+.tech h2{
+    font-family: var(--title-font);
+    font-size: var(--medium);
+    font-weight: 800;
+    color: var(--default-color);
+    padding-bottom: 15px;
+}
+.tech p{
+    font-family: var(--paraph-font);
+    font-size: var(--regular);
+    font-weight: 400;
+    color: var(--default-color);
+}
+.tech .container{
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tech .container .imgbx{
+    width: 100px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.tech .container .imgbx img{
+    max-width: 50px;
+    margin: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: .5s;
+}
+.tech .container .imgbx img:hover{
+    opacity: 1;
+    max-width: 60px;
+}
+
+/* Our conception design */
+#Oeuvres{
+    width: 100%;
+    margin: 0;
+    background-color: var(--default-color);
+}
+#Oeuvres .text{
+    padding-top: 60px;
+    font-family: var(--paraph-font);
+    font-size: var(--regular);
+    font-weight: 600;
+    color: var(--b-color);
+    text-align: center;
+}
+#Oeuvres .container{
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#Oeuvres .container .imgbx{
+    width: 50%;
+    min-height: 500px;
+    background-color: var(--black-color);
+}
+#Oeuvres .container .text-box{
+    width: 50%;
+    min-height: 500px;
+    padding: 30px;
+    background-color: var(--default-color);
+}
+#Oeuvres .container .text-box h3{
+    padding: 20px 30px;   
+    font-family: var(--title-font);
+    font-size: var(--medium);
+    font-weight: 800;
+    color: var(--black-color);    
+}
+#Oeuvres .container .text-box p{
+    padding: 20px 30px;
+    margin-bottom: 20px;   
+    font-size: var(--regular);
+    font-weight: 400;
+    color: var(--black-color);
+    font-family: var(--paraph-font);
+    line-height: 1.5;
+    text-align: start;
+}
+#Oeuvres .container .text-box a{
+    margin: 30px;
+    padding: 20px 30px;
+    background-color: var(--btn-color);
+    text-decoration: none;   
+    font-size: var(--regular);
+    font-weight: 400;
+    color: var(--default-color);
+    font-family: var(--paraph-font);
+    line-height: 1.5;
+    letter-spacing: .01em;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 1s ;
+}
+#Oeuvres .container .text-box a:hover{
+    opacity: 1;
+    padding: 20px 45px;
+}
+#Oeuvres .container .imgbx img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Expert design */
+
+#Expert{
+    width: 100%;
+}
+.container p{
+  font-size: var(--regular);
+  font-weight: 400;
+  font-family: var(--paraph-font);
+  color: var(--black-color);
+  text-align: center;
+}
+#Expert .container {
+    width: 100%;
+    padding: 0 30px;
+    
+    
+    
+}
+#Expert .container .scroll__images{
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 4px 4px 4px 4px;
+
+    
+}
+.scroll__images .tecbx{
+    width: 250px;
+    height: 380px;
+    margin: 30px;
+    position: relative;
+    background-color: #fff;
+
+}
+.tecbx img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.tecbx h2{
+    font-family: var(--title-font);
+    font-size: var(--medium);
+    font-weight: 800;
+    color: var(--b-color);
+    margin-top: 10px;
+    text-align:center;
+    font-size: 14px;
+}
+.tecbx p{
+    
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* Testimonials design */
+#Testimonials{
+    width: 100%;
+    padding-top: 40px;
+    text-align: center;
+    background-color: var(--b-color);
+}
+#Testimonials p{
+    font-size: var(--regular);
+    font-weight: 400;
+    font-family: var(--paraph-font);
+    color: var(--default-color);
+}
+#Testimonials h2{
+    margin-bottom: 15px;
+    font-size: var(--medium);
+    font-weight: 800;
+    color: var(--default-color);
+    font-family: var(--title-font);
+}
+#Testimonials .container{
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;  
+}
+#Testimonials .container .test{
+    width:450px;
+    padding: 20px;
+    margin: 20px 10px;
+    background-color: var(--default-color);
+}
+#Testimonials .container .test p{
+    font-size: var(--regular);
+    font-weight: 400;
+    font-family: var(--paraph-font);
+    color: var(--black-color);
+    opacity: 0.5;
+    text-align: initial;
+}
+#Testimonials .container .test h3{
+    font-size: var(--regular);
+    font-weight: 600;
+    font-family: var(--paraph-font);
+    color: var(--b-color);
+    text-align: end;
+}
+
+/* contact design */
+.Bcontact{
+    padding: 100px;
+    background: var(--black-color);
+    text-align: center;
+}
+.Bcontact .text{
+    color: var(--default-color);
+    font-family: var(--paraph-font);
+}
+.Bcontact .heading{
+    color: var(--default-color);
+}
+.contact{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: stretch !important;
+
+}
+.contentBx{
+    background: var(--default-color);
+    padding: 60px 50px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ; 
+    text-align: left;
+}
+.imgBx2{
+    width: 50%;   
+}
+.imgBx2 img{
+    width: 100%;
+    
+    object-fit: cover;
+}
+.redbg{
+    width: 50%;
+    background: var(--btn-color) !important;
+    
+}
+.form{
+    width: 100%;
+    padding: 0 30px;
+}
+.form .input{
+    margin-bottom: 40px;
+}
+.form .input input{
+    width: 100%; 
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--default-color);
+    border-bottom: 2px solid var(--default-color);
+}
+.form .input input::placeholder{
+    color: var(--default-color);
+}
+.form .input textarea{
+    width: 100%; 
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    min-height: 150px;
+    color: var(--default-color);
+    border-bottom: 2px solid var(--default-color);
+}
+.form .input textarea::placeholder{
+    color: var(--default-color);
+}
+.form .input input[type="submit"]{
+    width: 150px;
+    background: var(--default-color);
+    color: var(--black-color);
+    cursor: pointer;
+    font-weight: 400p;
+}
+
+/* Footer design */
+#footer{
+    background: var(--black-color);
+    opacity: .9;
+    color: var(--default-color);
+    padding: 20px 100px;
+    
+}
+#footer .tag{
+    border-top: 1px solid var(--default-color);
+    padding: 10px;
+    text-align: center;
+}
+.footer{
+    background: var(--black-color);
+    opacity: .9;
+    color: var(--default-color);
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+}
+.footer .Navbar,
+.footer ul{
+    list-style-type: none;
+}
+.footer .Navbar li a{
+    text-decoration: none;
+    color: var(--default-color);
+    font-weight: 400;
+}
+.footer .Navbar li a:hover{
+    font-weight: 600;
+}
+.footer .Navbar p,
+.footer .adress p{
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+@media (max-width:991px) {
+    /* Humberger design */
+    .humb{
+        display: block;
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+        position: relative;
+    }
+    .line{
+        width: 20%;
+        height: 6px;
+        background-color: #000;
+        margin-top: 10px;
+    }
+    .humb .line, .humb::before, .humb::after{
+        content: '';
+        width: 20%;
+        height: 6px;
+        background-color: #000;
+        display: block;
+        margin: 8px 0;
+        transition: 0.4s linear;
+        border-radius: 4px;
+    }
+    .humb.is-active .line{
+        opacity: 0;
+    }
+    .humb.is-active::before{
+        transform: rotate(-45ded) translate(-10px, 6px);
+    }
+    .humb.is-active::after{
+        transform: rotate(45deg) translate(-10px, 7px);
+    }
+    .navigation-bloc ul{
+        display: none;
+    }
+    .Navbar.is-active{
+        display: block;
+    }
+/* tablet design apropos */
+    .about{
+        flex-direction: column-reverse;
+        padding: 30px 0 10px 10px;
+        align-items: flex-start;
+    }
+    .about .logo{
+        width: 100%;
+    }
+    .about .content{
+        width: 100%;
+    }
+/* Oeuvre Design */
+    #Oeuvres .container{
+        width: 100%;
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    #Oeuvres .container .imgbx{
+        width: 100%;
+        height: 500px;
+        background-color: var(--black-color);
+    }
+    #Oeuvres .container .text-box{
+        width: 100%;
+        min-height: 500px;
+        padding: 30px;
+        background-color: var(--default-color);
+    }
+/* contact design tablet */
+    .contact{
+        flex-direction: column-reverse;
+        
+    }
+    .imgBx2{
+        width: 100%;   
+    }
+    .redbg{
+        width: 100%;
+        background: var(--btn-color) !important;
+        
+    }
+    .form{
+        padding: 0 100px;
+    }
+
+    /* tablet footer design */
+    .footer{
+        
+        padding: 10px 30px;
+        
+        
+    }
+    
+}
