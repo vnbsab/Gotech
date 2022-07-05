@@ -10,6 +10,7 @@
     --small-size : 36px;
     --medium : 25px;
     --regular : 18px;
+    --regu : 14px
 
     /* color font */
     --default-color : #fff;
@@ -32,27 +33,29 @@
 }
 body{
     font-family: var(--paraph-font);
+    background-color: #000;
     
 }
 
 /* Navigation design */
 nav.sticky {
-    padding: 5px 100px;
-    background:  var(--default-color);
-    color: var(--b-color);
+    padding: 5px 50px;
+    background:  #fff;
+    color: #254888;
     border-bottom: none;
     box-shadow: 0px 1px 1px 2px rgba(0,0,0,.1);
 }
 nav.sticky .Title h1{
-    color: var(--b-color);
+    color: #254888;
 }
 
 nav.sticky ul li a {
-    color: var(--black-color);
+    color: #254888;
 }
+
 nav.sticky ul li a:hover{
     letter-spacing: 2px; 
-    color: var(--b-color);
+    color: #254888;
     font-weight: 600;
 }
 .main-bloc{
@@ -60,7 +63,6 @@ nav.sticky ul li a:hover{
     height: 10vh;
     position: fixed;
     background: transparent;
-    border-bottom: var(--border-default); 
     z-index: 1000;
 }
 .main-bloc .navigation-bloc{
@@ -79,7 +81,7 @@ nav.sticky ul li a:hover{
     font-family: var(--title-font);
     font-size: var(--big-size);
     font-weight: 900;
-    color: var(--default-color);
+    color: #fff;
 }
 .navigation-bloc ul{
     margin-top: 10px;
@@ -93,12 +95,12 @@ nav.sticky ul li a:hover{
     text-decoration: var(--hide);
     font-weight: 500;
     margin-left: 30px;
-    color: var(--default-color);
+    color: #fff;
     transition: .5s;
 }
 .navigation-bloc ul li a:hover{
     letter-spacing: 2px; 
-    color: var(--default-color);
+    color: #fff;
     font-weight: 600;
     position: relative;
 }
@@ -108,11 +110,11 @@ nav.sticky ul li a:hover{
     margin-bottom: -5px ;
     bottom: 0;
     width: 100%;
-    height: 3px;
-    background-color: var(--b-color);
+    height: 2px;
+    background-color: #254888;
     transform-origin: 100% 0 ;
     transform: scale(0);
-    transition: 0.4s;
+    transition: 1s;
    
 }
 .navigation-bloc ul li a:hover::before{
@@ -121,7 +123,7 @@ nav.sticky ul li a:hover{
 }
 /* HUMBERGER DESIGN */
 .humb{
-    display: block;
+    display: none;
    
         
         margin-top: 10px;
@@ -130,48 +132,74 @@ nav.sticky ul li a:hover{
         position: relative;
 
 }
+.menu-mob{
+    display: none;
+    transition: .8s;
+}
 
 /* hero design */
+/* #Accueil{
+    display: none;
+} */
 #Accueil{
+    
     width: 100%;
     height: 100vh;
     position: relative;
+}
+
+#Accueil .content{
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--b-color );
+    position: relative;
+    /* background-color: #000;  */
 }
-#Accueil img{
+#Accueil .content .sliderImg .slider{
     width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
+    height: 100%;    
     object-fit: cover;
-    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+   
+}.sliderImg .slider:first-child{
+    display: block;
 }
-#Accueil .content{
-    width: 750px;
-    text-align: center;
-    z-index: 1;
+.content .NameText{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    padding: 2rem 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.1rem;
 }
-.content h1{
-    font-family: var(--title-font);
-    font-size: var(--big-size);
-    font-weight: 900;
-    color: var(--default-color);
+.content .NameText h1{
+    color: #fff;
+    font-family: var(--title-font) ;
+    font-size: 4rem;
+    margin-bottom: 0.55rem;
 }
-.content p{
-    font-size: var(--regular);
-    font-family: var(--paraph-font);
-    color: var(--default-color);
+.content .NameText p{
+    color: #fff;
+    font-size: 1.75rem;
+
 }
 
 /* A-propos design */
 #A-propos{
     width: 100%; 
+    background-color: #fff;
+    
 }
-.about{
+
+#A-propos .about{
     width: 100%;
     padding: 30px;
     position: relative;
@@ -179,13 +207,14 @@ nav.sticky ul li a:hover{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--default-color);
+    background-color: #fff;
 }
-.about .content{
+#A-propos .about .contenu{
+    position: relative;
     width: 50%;
-    height: 400px;
+    min-height: 400px;
     padding: 20px 30px;
-    background-color: var(--default-color);
+    /* background-color: #fff; */
 }
 h2{
     margin-bottom: 15px;
@@ -195,18 +224,18 @@ h2{
     font-family: var(--title-font);
     
 }
-.about .content p{
+#A-propos .about .contenu p{
     font-size: var(--regular);
     font-weight: 400;
-    color: var(--black-color);
+    color: #000;
     font-family: var(--paraph-font);
     line-height: 1.5;
-
 }
 .about .logo{
+    position: relative;
     width: 50%;
     height: 350px;
-    background-color: var(--blue-color);
+    
 }
 .about .logo img{
     width: 100%;
@@ -216,10 +245,12 @@ h2{
 
 /* Our services Design */
 #Services{
+    position: relative;
     width: 100%;
     padding: 0 100px;   
     text-align: center;
-    margin-top: 60px; 
+    /* margin-top: 40px;  */
+    background-color: #fff;
 }
 #Services .container{
     width: 100%;
@@ -232,22 +263,23 @@ h2{
 #Services .container .card{
     width: 350px;
     height: 400px;
+    border-radius: 5px;
     margin:20px 0;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;  
-    background-color: #1111;  
+    /* background-color: #1111;   */
 }
 .card div{
     display: block;
 }
 #Services .container .card div img{
-    max-width: 100px;
+    max-width: 300px;
 }
 #Services .container .card div h3{
     padding: 10px;
-    font-size: var(--medium);
+    font-size: var(--regular);
     font-weight: 500;
     font-family: var(--paraph-font);
 }
@@ -258,20 +290,20 @@ h2{
     padding:60px;   
     text-align: center;
     margin-top: 60px;
-    background-color: var(--b-color); 
+    background-color: #254888; 
 }
 .tech h2{
     font-family: var(--title-font);
     font-size: var(--medium);
     font-weight: 800;
-    color: var(--default-color);
+    color: #fff;
     padding-bottom: 15px;
 }
 .tech p{
     font-family: var(--paraph-font);
     font-size: var(--regular);
     font-weight: 400;
-    color: var(--default-color);
+    color: #fff;
 }
 .tech .container{
     width: 100%;
@@ -305,14 +337,14 @@ h2{
 #Oeuvres{
     width: 100%;
     margin: 0;
-    background-color: var(--default-color);
+    background-color: #fff;
 }
 #Oeuvres .text{
     padding-top: 60px;
     font-family: var(--paraph-font);
     font-size: var(--regular);
     font-weight: 600;
-    color: var(--b-color);
+    color: #254888;
     text-align: center;
 }
 #Oeuvres .container{
@@ -325,27 +357,27 @@ h2{
 #Oeuvres .container .imgbx{
     width: 50%;
     min-height: 500px;
-    background-color: var(--black-color);
+    /* background-color: #000; */
 }
 #Oeuvres .container .text-box{
     width: 50%;
     min-height: 500px;
     padding: 30px;
-    background-color: var(--default-color);
+    background-color: #fff;
 }
 #Oeuvres .container .text-box h3{
     padding: 20px 30px;   
     font-family: var(--title-font);
     font-size: var(--medium);
     font-weight: 800;
-    color: var(--black-color);    
+    color: #000;    
 }
 #Oeuvres .container .text-box p{
     padding: 20px 30px;
     margin-bottom: 20px;   
     font-size: var(--regular);
     font-weight: 400;
-    color: var(--black-color);
+    color: #000;
     font-family: var(--paraph-font);
     line-height: 1.5;
     text-align: start;
@@ -353,22 +385,25 @@ h2{
 #Oeuvres .container .text-box a{
     margin: 30px;
     padding: 20px 30px;
-    background-color: var(--btn-color);
+    background-color: #a70606;
     text-decoration: none;   
     font-size: var(--regular);
     font-weight: 400;
-    color: var(--default-color);
+    color: #fff;
     font-family: var(--paraph-font);
     line-height: 1.5;
     letter-spacing: .01em;
-    opacity: 0.7;
+    
     cursor: pointer;
     transition: 1s ;
 }
-#Oeuvres .container .text-box a:hover{
+a.annim_btn{
     opacity: 1;
     padding: 20px 45px;
 }
+/* #Oeuvres .container .text-box a:hover{
+   
+} */
 #Oeuvres .container .imgbx img{
     width: 100%;
     height: 100%;
@@ -379,37 +414,60 @@ h2{
 
 #Expert{
     width: 100%;
+    background-color: #fff;
+    overflow-x: auto;
 }
 .container p{
   font-size: var(--regular);
   font-weight: 400;
   font-family: var(--paraph-font);
-  color: var(--black-color);
+  color: #000;
   text-align: center;
+}
+.container h2{
+    text-align: center;
 }
 #Expert .container {
     width: 100%;
+    height: 600px;
+    overflow-x: auto;
+    position: relative;
     padding: 0 30px;
-    
-    
     
 }
 #Expert .container .scroll__images{
     width: 100%;
-    padding: 0 10px;
+    /* height: 400px; */
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 4px 4px 4px 4px;
-
-    
+    justify-content: space-between;
+    overflow-x: auto;  
 }
+.scroll__images::-webkit-scrollbar{
+    visibility: hidden;
+}
+/* .scroll__images .bloc1{
+    /* width: 100%; */
+    /* display: flex;
+    justify-content: left; */
+    /* overflow-x: auto; */
+/* } */ */
+
 .scroll__images .tecbx{
-    width: 250px;
-    height: 380px;
-    margin: 30px;
+    
     position: relative;
-    background-color: #fff;
+    left: 0;
+    text-align: center;  
+    background-color: purple;
+    transition: .5s;
+    margin: 30px;
+    overflow:hidden;
+    min-width: 250px;
+    height: 380px;
+    /* margin: 30px auto; */
+    position: relative;
+    border: 1px solid none;
+    box-sizing: 2px 2px 2px 2px var(--black-color);
+    background-color: #254888;
 
 }
 .tecbx img{
@@ -417,17 +475,17 @@ h2{
     height: 300px;
     object-fit: cover;
 }
-.tecbx h2{
+.tecbx h3{
     font-family: var(--title-font);
-    font-size: var(--medium);
-    font-weight: 800;
-    color: var(--b-color);
+    font-size: 36px;
+    font-weight: 900;
+    color: #fff;
     margin-top: 10px;
     text-align:center;
     font-size: 14px;
 }
 .tecbx p{
-    
+    color: #fff;
     text-align: center;
     font-size: 12px;
 }
@@ -438,19 +496,19 @@ h2{
     width: 100%;
     padding-top: 40px;
     text-align: center;
-    background-color: var(--b-color);
+    background-color:#254888;
 }
 #Testimonials p{
     font-size: var(--regular);
     font-weight: 400;
     font-family: var(--paraph-font);
-    color: var(--default-color);
+    color: #fff;
 }
 #Testimonials h2{
     margin-bottom: 15px;
     font-size: var(--medium);
     font-weight: 800;
-    color: var(--default-color);
+    color: #fff;
     font-family: var(--title-font);
 }
 #Testimonials .container{
@@ -465,7 +523,7 @@ h2{
     width:450px;
     padding: 20px;
     margin: 20px 10px;
-    background-color: var(--default-color);
+    background-color: #fff;
 }
 #Testimonials .container .test p{
     font-size: var(--regular);
@@ -479,7 +537,7 @@ h2{
     font-size: var(--regular);
     font-weight: 600;
     font-family: var(--paraph-font);
-    color: var(--b-color);
+    color: #254888;
     text-align: end;
 }
 
@@ -490,11 +548,11 @@ h2{
     text-align: center;
 }
 .Bcontact .text{
-    color: var(--default-color);
+    color: #fff;
     font-family: var(--paraph-font);
 }
 .Bcontact .heading{
-    color: var(--default-color);
+    color: #fff;
 }
 .contact{
     position: relative;
@@ -504,7 +562,7 @@ h2{
 
 }
 .contentBx{
-    background: var(--default-color);
+    background: #fff;
     padding: 60px 50px;
     width: 50%;
     display: flex;
@@ -541,11 +599,11 @@ h2{
     padding: 10px 0;
     font-size: 18px;
     font-weight: 300;
-    color: var(--default-color);
-    border-bottom: 2px solid var(--default-color);
+    color: #fff;
+    border-bottom: 2px solid #fff;
 }
 .form .input input::placeholder{
-    color: var(--default-color);
+    color: #fff;
 }
 .form .input textarea{
     width: 100%; 
@@ -557,16 +615,17 @@ h2{
     font-size: 18px;
     font-weight: 300;
     min-height: 150px;
-    color: var(--default-color);
-    border-bottom: 2px solid var(--default-color);
+    color: #fff;
+    border-bottom: 2px solid #fff;
 }
 .form .input textarea::placeholder{
-    color: var(--default-color);
+    color: #fff;
 }
 .form .input input[type="submit"]{
     width: 150px;
-    background: var(--default-color);
-    color: var(--black-color);
+    background: #fff;
+    color: #014e61;
+    font-weight: 600;
     cursor: pointer;
     font-weight: 400p;
 }
@@ -575,19 +634,19 @@ h2{
 #footer{
     background: var(--black-color);
     opacity: .9;
-    color: var(--default-color);
+    color: #fff;
     padding: 20px 100px;
     
 }
 #footer .tag{
-    border-top: 1px solid var(--default-color);
+    border-top: 1px solid #fff;
     padding: 10px;
     text-align: center;
 }
 .footer{
     background: var(--black-color);
     opacity: .9;
-    color: var(--default-color);
+    color: #fff;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
@@ -600,27 +659,35 @@ h2{
     list-style-type: none;
 }
 .footer .link{
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
 }
 .footer .link li a{
     padding: 0 10px;
+   
 }
 .footer .link li a i{
     font-size: 30px;
-    color: var(--btn-color);
+    color: #014e61;
+}
+.footer .link li a i:hover{
+    color: #fff;
 }
 .footer .adress li i{
     font-size: 15px;
-    color: var(--btn-color);
+    padding: 0px 10px 0px 0px;
+    text-align: end;
+    color: #014e61;
 }
 .footer .Navbar li a{
     text-decoration: none;
-    color: var(--default-color);
+    color: #fff;
     font-weight: 400;
 }
 .footer .Navbar li a:hover{
     font-weight: 600;
+    color: #014e61;
 }
 .footer .Navbar p,
 .footer .adress p{
@@ -628,45 +695,84 @@ h2{
     margin-bottom: 10px;
     text-transform: uppercase;
 }
-@media (max-width:991px) {
+
+ /* __________________________STYLE TABLET________________________________ */
+@media screen and (min-width: 481px) and (max-width:768px){
     /* Humberger design */
     .humb{
-        display: block;
         margin-top: 10px;
-        width: 150px;
-        height: 150px;
-        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        z-index: 100000;
     }
     .line{
-        width: 20%;
-        height: 6px;
-        background-color: #000;
-        margin-top: 10px;
+        width: 80%;
+        height: 4px;
+        background-color: red;
+        margin-top: 30px;
     }
     .humb .line, .humb::before, .humb::after{
-        content: '';
-        width: 20%;
-        height: 6px;
-        background-color: #000;
-        display: block;
-        margin: 8px 0;
-        transition: 0.4s linear;
-        border-radius: 4px;
-    }
-    .humb.is-active .line{
-        opacity: 0;
-    }
-    .humb.is-active::before{
-        transform: rotate(-45ded) translate(-10px, 6px);
-    }
-    .humb.is-active::after{
-        transform: rotate(45deg) translate(-10px, 7px);
-    }
+       content: '';
+       width: 80%;
+       height: 4px;
+       background-color: red;
+       display: block;
+       margin: 8px 0;
+       transition: 0.6s linear;
+       border-radius: 10px;
+   }
+   
+   .humb.is-active .line{
+       margin-left: -100px;
+       transition: 1s linear;
+       
+   }
+   
+   .humb.is-active::before{
+       transform: rotate(-45deg) translate(-10px, 6px);
+   }
+   .humb.is-active::after{
+       transform: rotate(45deg) translate(-10px, -7px);
+   }
     .navigation-bloc ul{
         display: none;
     }
     .Navbar.is-active{
         display: block;
+    }
+    .menu-mob.is-active{
+        display: block;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: #254888;
+        transition: .8s;
+        z-index: 10000;
+    }
+    .menu-mob.is-active .Navbar{
+        width: 100%;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .menu-mob.is-active .Navbar li{
+        list-style-type: none;
+        margin: 10px 0;
+    }
+    .menu-mob.is-active .Navbar li a{
+        text-decoration: none;
+        
+        color: #fff;
     }
 /* tablet design apropos */
     .about{
@@ -677,10 +783,17 @@ h2{
     .about .logo{
         width: 100%;
     }
-    .about .content{
-        width: 100%;
+    .about .contenu{
+        min-width: 100%;
     }
-/* Oeuvre Design */
+    /* Services tablet design */
+    #Services {
+        padding: 25px;
+    }
+    #Services .container .card{
+        max-width: 340px;
+    }
+    /* Oeuvre Design */
     #Oeuvres .container{
         width: 100%;
         padding: 60px 0;
@@ -690,8 +803,8 @@ h2{
     }
     #Oeuvres .container .imgbx{
         width: 100%;
-        height: 500px;
-        background-color: var(--black-color);
+        /* height: 500px; */
+        /* background-color: var(--black-color); */
     }
     #Oeuvres .container .text-box{
         width: 100%;
@@ -699,7 +812,25 @@ h2{
         padding: 30px;
         background-color: var(--default-color);
     }
-/* contact design tablet */
+
+    /* Testimonial */
+    #Testimonials .container{
+        
+        padding: 20px 20px;
+         
+    }
+    #Expert .container{
+        padding: 0;
+    }
+    #Expert .container .scroll__images{
+        
+        justify-content: center;
+    }
+    #Expert .container .scroll__images .tecbx{
+        margin: 15px;
+        width: 290px;
+    }
+    /* contact design tablet */
     .contact{
         flex-direction: column-reverse;
         
@@ -717,11 +848,227 @@ h2{
     }
 
     /* tablet footer design */
-    .footer{
-        
-        padding: 10px 30px;
-        
-        
+    .footer{        
+        padding: 10px 30px;        
+    }
+    .footer .link{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     
+    
 }
+
+ /* __________________________STYLE MOBILE________________________________ */
+@media screen and (max-width: 480px){
+     /* Humberger design */
+     .humb{
+        margin-top: 10px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        z-index: 100000;
+    }
+    .line{
+        width: 80%;
+        height: 4px;
+        background-color: red;
+        margin-top: 30px;
+    }
+    .humb .line, .humb::before, .humb::after{
+       content: '';
+       width: 80%;
+       height: 4px;
+       background-color: red;
+       display: block;
+       margin: 8px 0;
+       transition: 0.6s linear;
+       border-radius: 10px;
+   }
+   
+   .humb.is-active .line{
+       margin-left: -100px;
+       transition: 1s linear;
+       
+   }
+   
+   .humb.is-active::before{
+       transform: rotate(-45deg) translate(-10px, 6px);
+   }
+   .humb.is-active::after{
+       transform: rotate(45deg) translate(-10px, -7px);
+   }
+    .navigation-bloc ul{
+        display: none;
+    }
+    .Navbar.is-active{
+        display: block;
+    }
+    .menu-mob.is-active{
+        display: block;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: #254888;
+        transition: .8s;
+        z-index: 10000;
+    }
+    .menu-mob.is-active .Navbar{
+        width: 100%;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .menu-mob.is-active .Navbar li{
+        list-style-type: none;
+        margin: 10px 0;
+    }
+    .menu-mob.is-active .Navbar li a{
+        text-decoration: none;
+        
+        color: #fff;
+    }
+/* Home page */
+.content .NameText h1{
+    font-size: 25px;
+
+}
+.content .NameText p{
+    font-size: 14px;
+}
+/* tablet design apropos */
+    .about{
+        flex-direction: column-reverse;
+        padding: 30px 0 10px 10px;
+        align-items: flex-start;
+    }
+    .about .logo{
+        width: 100%;
+    }
+    .about .contenu{
+        min-width: 100%;
+    }
+    /* Services tablet design */
+    #Services {
+        margin-top: 80px;
+        padding: 25px;
+    }
+    #Services .container .card{
+        max-width: 340px;
+    }
+    /* Oeuvre Design */
+    #Oeuvres .container{
+        width: 100%;
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    #Oeuvres .container .imgbx{
+        width: 100%;
+        min-height: 300px;
+    }
+    #Oeuvres .container .text-box{
+        width: 100%;
+        min-height: 500px;
+        padding: 0px;
+        background-color: var(--default-color);
+    }
+
+    /* Testimonial */
+    #Testimonials .container{
+        
+        padding: 20px 20px;
+         
+    }
+    #Expert .container{
+        padding: 10px;
+    }
+    #Expert .container .scroll__images{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction:row;
+    }
+    #Expert .container .scroll__images .tecbx{
+        margin: 15px;
+        min-width: 290px;
+    }
+    /* contact design tablet */
+    .contact{
+        flex-direction: column-reverse;
+        
+    }
+    .imgBx2{
+        width: 100%;   
+    }
+    .redbg{
+        width: 100%;
+        background: var(--btn-color) !important;
+        
+    }
+    .form{
+        padding: 0 25px;
+    }
+
+    /* tablet footer design */
+    #footer{
+        padding: 10px;
+    }
+    .footer{        
+        padding: 10px;        
+    }
+    .footer .link{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .Title h1 {
+        font-size: var(--medium);        
+    }
+    nav .Title h1{
+        color: #fff;
+    }
+    
+    .about{
+        flex-direction: column-reverse;
+    }
+    h2 {        
+        font-size: var(--medium);
+    }
+    .about .content p {
+        font-size: var(--regu);
+    }
+    #Services .container {
+        flex-direction: column;
+    }
+} 

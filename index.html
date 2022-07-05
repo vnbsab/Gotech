@@ -21,39 +21,62 @@
             <div class="Title">
                 <h1>Gotech</h1>
             </div>
+            
+            <!-- NavBar -->
+            <ul class="Navbar">
+                <li><a href="#Accueil">Home</a></li>
+                <li><a href="#A-propos">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Oeuvres">Artwork</a></li>
+                <li><a href="#Expert">Expert</a></li>
+                <li><a href="#Testimonials">Testimony</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
             <!-- humberger -->
             <div class="humb">
                 <div class="line"></div>
             </div>
-            <!-- NavBar -->
-            <ul class="Navbar">
-                <li><a href="#Accueil">Accueil</a></li>
-                <li><a href="#A-propos">A-porpos</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Oeuvres">Oeuvres</a></li>
-                <li><a href="#Expert">Experts</a></li>
-                <li><a href="#Testimonials">Testimonials</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
         </nav>
     </section>
+    <div class="menu-mob">
+        <ul class="Navbar">
+            <li><a href="#Accueil">Home</a></li>
+            <li><a href="#A-propos">About</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Oeuvres">Artwork</a></li>
+            <li><a href="#Expert">Expert</a></li>
+            <li><a href="#Testimonials">Testimony</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </div>
 
     <!--Hero bloc-->
-    <section id="Accueil">
-        <img src="./Images/gb.jpg" alt="bg gotech">
+    <section id="Accueil" class="acceuil">
+        
         <div class="content">
-            <h1><span>G</span>oma <span>T</span>echnologies</h1>
-            <p>Created A Novel World</p>
+            <div class="sliderImg">
+                <img src="./Images/gb.jpg" class="slider" alt="bg gotech">
+                <img src="./Images/forma.jpg" class="slider" alt="bg gotech">
+                <img src="./Images/secu.jpg" class="slider" alt="bg gotech">
+                <img src="./Images/elec.jpg" class="slider" alt="bg gotech">
+                
+            </div>
+            <div class="NameText">
+               <h1>Goma Technologies</h1>
+               <p>Let's Create a New World...</p>
+            </div>
+            
         </div>
     </section>
     
     <!-- About bloc -->
     <section id="A-propos">
         <div class="about">
-            <div class="content">
-                <h2>A-propos</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia atque temporibus deleniti accusamus nesciunt magni et neque voluptatem laboriosam iste sed, recusandae amet perferendis, mollitia assumenda error. Doloribus, ut provident.
-                    Aspernatur fugiat unde eligendi amet deleniti velit, dignissimos nulla reprehenderit harum quae optio incidunt sed hic libero, illo molestias repellendus, ipsum neque voluptatibus laudantium. At molestias qui quod. Facere, non!</p>          
+            <div class="contenu">
+                <h2>Qui sommes-nous!</h2>
+                <p>La plupart des jeunes de notre communauté préfèrent rester dans le quartier sans rien faire rejéttant la faute à la communauté pour le manque du travail; 
+                    Les autres jeunes ayant conscience du sytème dans lequel ils vivent, préfèrent prendre un coup d'avance en attendant une évolution.</br> </br>
+                    Goma Technologies est une équipe des jeunes techniciens oeuvrant dans plusieurs domaines de la technologies dont l'Electricité Industrielle, Electricité Domestique, l'Electronique, la mécanique, l'informatique; le Design etc...</p>          
             </div>
             <div class="logo"><img src="./Images/1.jpg" alt="logo Gotech"></div>
         </div>
@@ -62,44 +85,44 @@
     <!-- Services Bloc -->
     <section id="Services">
         <h2>Nos Services</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic est quisquam nihil magnam autem perspiciatis.</p>
+        <p>Nous sommes à votre service pour tous vos problèmes techniques</p>
         
         <!-- Our services -->
         <div class="container">
             
                 <div class="card">
                     <div>
-                        <img src="./Images/services-electrician.png" alt="electricity">
+                        <img src="./Images/tec.svg">
                         <h3>Installation domestique</h3>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img src="./Images/services (1).png" alt="mecanic">
+                        <img src="./Images/mec.svg" alt="mecanic">
                         <h3>Conception mécanique</h3>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img src="./Images/circuit-electronic-board.png" alt="electronic">
+                        <img src="./Images/electronics.svg" alt="electronic">
                         <h3>Electronique</h3>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img src="./Images/computer-engineering (1).png" alt="computer">
+                        <img src="./Images/umaintenance_re_59vn.svg" alt="computer">
                         <h3>Maintenace Informatique</h3>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img src="./Images/security.png" alt="security">
+                        <img src="./Images/security.svg" alt="security">
                         <h3>Conception des systèmes de sécurité</h3>
                     </div>
                 </div>
                 <div class="card">
                     <div>
-                        <img src="./Images/web-design.png" alt="design">
+                        <img src="./Images/design.svg" alt="design">
                     <h3>Design et Logo</h3>
                     </div>
                 </div>
@@ -110,7 +133,7 @@
     <!-- our technologies -->
     <section class="tech">
         <h2>We use cutting edge technology</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium assumenda porro necessitatibus rem ipsam amet accusantium omnis esse labor</p>
+        <p>Resoudre un problème nécessite des bs outils pour vous satisfaire. Voici donc quelques unes de nos technologies utilisées dans notre environnement de travail</p>
         <div class="container">
             <div class="imgbx"><img src="./Images/windows-10.png" alt=""></div>
             <div class="imgbx"><img src="./Images/autocad.png" alt=""></div>
@@ -120,79 +143,68 @@
             <div class="imgbx"><img src="./Images/adobe-photoshop.png" alt=""></div>
             <div class="imgbx"><img src="./Images/adobe-premiere-pro.png" alt=""></div>
         </div>
+        <div class="expert">
+            
+        </div>
     </section>
 
     <!-- Our conception -->
      <section id="Oeuvres">
-         <p class="text"><span>Goma Technologies</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+         <p class="text">A chaque besoin, notre équipe cherche une solution durable....</p>
          <div class="container">
             <div class="text-box">
                 <h3>Le mélangeur</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius enim suscipit explicabo, inventore velit fuga eveniet, illo vel doloremque laborum reprehenderit cupiditate nihil animi quasi ex qui excepturi quam aut?
-                Placeat perspiciatis ut dicta incidunt quasi laboriosam aspernatur. Numquam cum modi molestias dolores odit, amet, laborum id quis officia sapiente quod nostrum dolorem laboriosam, sunt tempora in nulla quae repellendus?
-                Maiores natus accusantium voluptatem, ratione culpa ea minus! Rem eligendi, repudiandae soluta aliquam corrupti minus laborum delectus, nulla vel quia autem maiores. Ab explicabo dignissimos unde consequuntur autem, eveniet esse!</p>
-            <a href="3">Lire plus</a>
+                <p>Vous voulez faire vos mélanges chimiques et produire en quantité? Goma Technologies vous propose un mélangeur Electro-mécanique, capable de mélanger jusqu'à 100litres de solutions chimique. <br> <br>
+                Equipé d'un moteur relié à un pivotservant à Ce modèle a été conçu pour une société des femmes voulant produire en quantité le savons liquide.</p>
+            <a href="#" class="btn_annim">Passez une commande</a>
             </div>
             <div class="imgbx">
-                <img src="./Images/forma.jpg" alt="">
+                <img src="./Images/projet.svg" alt="">
             </div>
          </div>
      </section>
-
-     <!-- Our Technicians -->
-     <section id="Expert">
-         
-        <div class="container">
-            <h2>Nos Experts</h2>
-                <p>Un travail bien fait, si humble soit-il est noble!</p>
-         
+     <!-- Our engieners -->
+     <section id="expert">
+         <div class="container">
+             <div class="imgbx">
+                 <img src="" alt="">
+                 <div class="content"></div>
+             </div>
+             <div class="imgbx">
+                 <img src="" alt="">
+                 <div class="content"></div>
+             </div>
+             <div class="imgbx">
+                 <img src="" alt="">
+                 <div class="content"></div>
+             </div>
+             <div class="imgbx">
+                 <img src="" alt="">
+                 <div class="content"></div>
+             </div>
+         </div>
+         <div class="container">
+             <div class="imgbx">
+                 <img src="" alt="">
+                 <div class="content"></div>
+             </div>
+             <div class="imgbx">
+                 <img src="" alt="">
+                 <div class="content"></div>
+             </div>
+             <div class="imgbx">
+                 <img src="" alt="">
+                 <div class="content"></div>
+             </div>
+             <div class="imgbx">
+                 <img src="" alt="">
+                 <div class="content"></div>
+             </div>
+         </div>
+     </section>
         
-         <div class="scroll__images">
-            <div class="tecbx">
-                <img src="./Images/phillip.JPG" alt="">
-                <h3>Philippe KIYANA</h3>
-                <p>Electrocien & Informaticien</p>
-            </div>
-            <div class="tecbx">
-                <img src="./Images/LUCN.jpeg" alt="">
-                <h3>Luc NTOZI</h3>
-                <p>Electricien</p>
-            </div>
-            <div class="tecbx">
-                <img src="./Images/victorien.jpg" alt="">
-                <h3>Victorien ILUNGA</h3>
-                <p>Junior Developer</p>
-            </div>
-            <div class="tecbx">
-                <img src="./Images/herkam.JPG" alt="">
-                <h3>Herve Kambale</h3>
-                <p>Electrocien</p>
-            </div>
-            <div class="tecbx">
-                <img src="./Images/toussqint.jpeg" alt="">
-                <h3>Toussaint MBURAS</h3>
-                <p>Electricien</p>
-            </div>
-            <div class="tecbx">
-                <img src="./Images/vaincr.jpg" alt="">
-                <h3>Vainqueur</h3>
-                <p>Deseigner</p>
-            </div>
-            <div class="tecbx">
-                <img src="./Images/capistr.jpg" alt="">
-                <h3>Jean NTOZI</h3>
-                <p>Electricien</p>
-            </div>
-            <div class="tecbx">
-                <img src="./Images/kevin.jpg" alt="">
-                <h3>Kevin HERY</h3>
-                <p>Comptable</p>
-            </div>
-        </div>
-    
-        
-    </section>
-      
+  
+       
 
      <!-- Our testimonials -->
      <section id="Testimonials">
@@ -244,7 +256,7 @@
             </div>
         </div>
         <div class="imgBx2">
-           <img src="./Images/tl.jpg" alt="">
+           <img src="./Images/contact.svg" alt="">
         </div>
     </section>
      <!-- footer -->
@@ -286,6 +298,8 @@
 
 
     <!-- Only js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./Fonctionality/main.js"></script>
 </body>
 </html>
